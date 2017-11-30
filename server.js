@@ -8,8 +8,8 @@ function checkIsValidRequest(urlToGet)
 {
     return ( 
         urlToGet !== '' 
-    && urlToGet
-    && !(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/.test(urlToGet))
+        && urlToGet
+        && /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/.test(urlToGet)
     ) 
 }
 
@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
         chrome.kill()
     })
     .catch( (err) =>  {
-        console.log('err')
+        console.log(err)
         return res.send(err)
         chrome.kill()
     })
@@ -37,14 +37,3 @@ app.get('/', (req, res) => {
 })
 
 app.listen(8888, () => console.log('listening on port 8888!'))
-
-
-
-//   
-  
-//   await render('https://go2cinema.com/movies/baywatch-2017-1198354', {
-//     chromePort: chrome.port,
-//     inlineStyles: true
-//   });
-  
-//   

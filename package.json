@@ -1,0 +1,17 @@
+{
+  "name": "docker_spa_seo",
+  "version": "0.0.1",
+  "description": "server your single page application correctly to all bots",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.16.2",
+    "usus": "^1.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

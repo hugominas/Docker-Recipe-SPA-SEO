@@ -14,7 +14,7 @@ function checkIsValidRequest(urlToGet)
 }
 
 app.get('/', (req, res) => {
-    if(checkIsValidRequest(req.query.url)) 
+    if(!checkIsValidRequest(req.query.url)) 
         return res.send('nothing to render')
 
     const chrome = usus.launchChrome()
